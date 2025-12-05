@@ -455,16 +455,3 @@ print("\n✓ TP TERMINÉ AVEC SUCCÈS! ✓\n")
 
 ---
 
-## 12. Intégration dans GitHub
-
-Ajoutez ce fichier dans votre dépôt (par exemple `Model_Explication.md`) et créez un lien depuis votre `README.md` :
-
-```markdown
-Pour une explication détaillée du notebook d’entraînement, voir :
-[Explication pas à pas du modèle](Model_Explication.md)
-```
-
-Ce document est pensé comme une **documentation pédagogique** de votre code, utile pour :
-- les correcteurs du TP
-- vos futurs projets
-- toute personne souhaitant comprendre ou réutiliser votre pipeline.
