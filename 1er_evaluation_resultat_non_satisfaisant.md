@@ -1,8 +1,8 @@
 # 📊 Rapport expliqué – Évaluation du modèle CNN (classification d’animaux)
 
-Ce document explique en détail le rapport d’évaluation généré pour ton modèle **CNN** utilisé dans le projet *Project_cnn_flutter* (reconnaissance d’animaux dans des images).
+Ce document explique en détail le rapport d’évaluation généré pour mon modèle **CNN** utilisé dans le projet *Project_cnn_flutter* (reconnaissance d’animaux dans des images).
 
-L’objectif est que tu puisses **comprendre chaque chiffre** du rapport et **le réutiliser tel quel dans ton GitHub / documentation de projet**.
+L’objectif est que on puisses **comprendre chaque chiffre** du rapport et **le réutiliser tel quel dans ton GitHub / documentation de projet**.
 
 ---
 
@@ -296,5 +296,3 @@ Voici quelques pistes pour améliorer ce modèle CNN :
 > **Ce modèle CNN atteint une accuracy globale de 47,5 % sur 600 images de test (6 classes d’animaux), avec de bonnes performances sur les zèbres mais de fortes confusions entre tigres, girafes, éléphants et rhinocéros, ce qui en fait une base correcte pour un prototype Flutter + TFLite mais encore améliorable pour une utilisation en production.**
 
 ---
-
-✍️ Tu peux copier-coller ce fichier tel quel dans `evaluation_CNN_explique.md` dans ton repo GitHub, ou me demander de générer une version adaptée à ton format de projet (par exemple avec un sommaire, des figures, ou des blocs de code ajoutés).
