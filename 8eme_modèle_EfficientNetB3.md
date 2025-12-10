@@ -33,28 +33,52 @@ dans une application mobile Flutter.
 
 ---
 
-## 🧠 Architecture du modèle
+## 🧬 Architecture du modèle
 
-### 1. Backbone
+### 1. 🔩 Backbone (feature extractor)
 
-- **EfficientNetB3** pré-entraîné sur ImageNet
-- Couches de base gelées dans la Phase 1
-- Fine-tuning partiel dans la Phase 2
+- 🧠 **Base** : `EfficientNetB3` pré-entraîné sur **ImageNet**
+- 🧊 **Phase 1** : toutes les couches du backbone gelées (feature extractor fixe)
+- 🔥 **Phase 2** : fine-tuning partiel  
+  - ~20 % des couches les plus basses restent gelées  
+  - ~80 % des couches supérieures sont ré-entraînées sur le dataset des animaux
+
+---
+
+### 2. 🧱 Tête de classification personnalisée
+
+GlobalAveragePooling2D
+↓
+Dropout(0.3)
+↓
+Dense(256) + BatchNormalization + ReLU
+↓
+Dropout(0.5)
+↓
+Dense(6, activation="softmax")
 
 ### 2. Tête de classification
 
-```text
-GlobalAveragePooling2D
-Dropout(0.3)
-Dense(256) + BatchNormalization + ReLU
-Dropout(0.5)
-Dense(6, activation="softmax")
+GlobalAveragePooling2D : compresse les features spatiales en un vecteur
+Dense(256) : couche fully-connected pour apprendre des combinaisons de features
+BatchNormalization : stabilise l’apprentissage
+ReLU : non-linéarité classique, rapide et efficace
+Dropout(0.3 / 0.5) : réduit l’overfitting
+Dense(6, softmax) : probabilités pour les 6 classes
 
-3. Entrée / Sortie
+3. 🎛️ Entrée / Sortie
 
-Entrée : image RGB 224x224x3 en float32, valeurs 0–255.
+Entrée
 
-Sortie : vecteur de 6 probabilités (softmax).
+Image RGB
+Taille : 224 × 224 × 3
+Type : float32
+Valeurs de pixels : 0–255 (pas de division par 255 côté Flutter)
+
+Sortie
+
+Vecteur de 6 probabilités (softmax) :
+elephant, girafe, leopard, rhino, tigre, zebre
 
 📊 Jeu de données
 
