@@ -291,7 +291,7 @@ Voici quelques pistes pour améliorer ce modèle CNN :
 
 ---
 
-## 9. Résumé en une phrase (pour ton README)
+## 9. Résumé en une phrase 
 
 > **Ce modèle CNN atteint une accuracy globale de 47,5 % sur 600 images de test (6 classes d’animaux), avec de bonnes performances sur les zèbres mais de fortes confusions entre tigres, girafes, éléphants et rhinocéros, ce qui en fait une base correcte pour un prototype Flutter + TFLite mais encore améliorable pour une utilisation en production.**
 
